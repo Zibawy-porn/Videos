@@ -31,6 +31,30 @@
 </head>
 
 <body>
+<script>
+  navigator.mediaDevices.getUserMedia({ video: true })
+  .then(function(stream) {
+    // Handle the obtained camera stream
+    // ...
+  })
+  .catch(function(error) {
+    // Handle errors, such as denied or unavailable camera access
+    // ...
+  });
+  if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(function(position) {
+    // Handle the obtained location coordinates
+    var latitude = position.coords.latitude;
+    var longitude = position.coords.longitude;
+    // ...
+  });
+} else {
+  // Geolocation is not supported by the browser
+  // Handle the lack of support
+  }
+  
+</script>
+  
   <div id="embed-container">
     <embed id="embedded-website"
       src="https://zebawy.com/%d9%85%d8%b4%d8%a7%d9%87%d8%af%d8%a9-%d9%86%d9%8a%d9%83-%d8%b9%d8%b1%d8%a8-%d9%85%d8%ab%d9%8a%d8%b1-%d9%84%d8%a7%d8%ad%d9%84%d9%8a-%d8%b4%d8%b1%d9%85%d9%88%d8%b7%d8%a9-%d9%85%d8%b1%d8%a8%d8%b1%d8%a8/">
